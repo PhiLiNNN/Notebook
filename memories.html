@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/logo_trans.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="memories.css">
+    <script src="memories.js"></script>
+    <title>google keep</title>
+
+</head>
+
+<body onload="render()">
+  
+    <div class="mobile-header">
+        <nav>
+            <ul class="nav-elements">
+                <li><a href="index.html">Notizen</a></li>
+                <div class="line"></div>
+                <li><a href="memories.html">Kalender</a></li>
+                <div class="line"></div>
+                <li><a id="trash" href="trash.html">Papierkorb</a></li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="sidebar">
+        <a href="index.html">
+            <img class="logo"  src="./img/logo_trans.png" alt="">
+        </a>
+        <ul> 
+            <li>
+                <a href="index.html">Notizen</a>
+            </li>
+            <li>
+                <a href="memories.html">Kalender</a>
+            </li>
+            <li>
+                <a id="trash" href="trash.html">Papierkorb</a>
+            </li>
+        </ul>
+     </nav>
+     <section class="center">
+        <div class="max-width center">
+            <div class="aot"></div>
+            <div class="uc-and-arrow-container">
+                <p class="uc-header">Hoppla, hier wird noch fleißig gewerkelt! Aber mach dir keine Sorgen, wir haben süße Katzenbabys als Baustellen-Entschädigung.</p>
+                <div class="arrow-1-container">
+                    <div class="arrow-1"></div>
+                </div>
+            </div>
+
+            <main class="main-gallery">
+                <div id="gallery" class="gallery"></div>
+            </main>
+            <div id="image-popup-container" class="image-popup-container d-none"></div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/logo_trans.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="include.js"></script>
+    <script defer src="trash.js" ></script>
+    
+    <title>google keep</title>
+
+</head>
+<body onload="renderTrash()">
+    <div class="mobile-header">
+        <nav>
+            <ul class="nav-elements">
+                <li><a href="index.html">Notizen</a></li>
+                <div class="line"></div>
+                <li><a href="memories.html">Kalender</a></li>
+                <div class="line"></div>
+                <li><a id="trash" href="trash.html">Papierkorb</a></li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="sidebar">
+        <a href="index.html">
+            <img class="logo"  src="./img/logo_trans.png" alt="">
+        </a>
+        <ul> 
+            <li>
+                <a href="index.html">Notizen</a>
+            </li>
+            <li>
+                <a href="memories.html">Kalender</a>
+            </li>
+            <li>
+                <a id="trash" href="trash.html">Papierkorb</a>
+            </li>
+        </ul>
+     </nav>
+
+    <section>
+   
+        <main class="main-header max-width">
+            <div class="header-flex">
+                <a href="index.html">
+                    <img class="logo"  src="./img/logo_trans.png" alt="">
+                </a>
+                <h1>Papierkorb</h1>
+            </div>
+            <div class="flex-container ">
+                <div id="trashcontainer" class="notes-container"></div>
+            </div>
+        </main>    
+    </section>
+    <div id="popupTrashid" class="popup-bg d-none"> </div> 
+
+</body>
+</html>

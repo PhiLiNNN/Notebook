@@ -1,0 +1,358 @@
+body {
+    background-color: black;
+}
+.max-width {
+    max-width: 1920px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.uc-and-arrow-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 64px;
+    align-items: center;
+}
+
+.arrow-1-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+}
+
+.arrow-1 {
+    transform: rotate(90deg);
+    width:100px;
+    height:30px;
+    display: flex;
+    color: white;
+  }
+
+.arrow-1:before {
+    content: "";
+    background: currentColor;
+    width:15px;
+    clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+    animation: a1 1.5s infinite linear;
+}
+@keyframes a1 {
+    90%,
+    100%{flex-grow: 1}
+}
+
+.aot {
+    background-image: url('./img/under_construction.png');
+    background-size: cover;
+    background-position: 50% 55%;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0;
+    height: 100vh;
+    z-index: -999;
+}
+
+
+.uc-header {
+    margin: 0;
+    padding: 64px 44px 0 164px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    color: var(--ff-color-white);
+    text-wrap: balance;
+}
+
+.main-gallery {
+    position: absolute;
+    top: 0;
+    margin-top: 100vh;
+    padding: 100px 16px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery img {
+    width: 15rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    transition: scale 250ms ease-in-out;
+    vertical-align: bottom;
+    box-shadow: 16px 16px 16px -8px #282E3A93,
+    8px 8px 8px 0 #282E3A93;
+    margin-bottom: 64px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 563px) {
+    .gallery img {
+        height: 17rem; 
+        width: 10rem;
+    }
+}
+
+.gallery img:hover {
+    border:  2px solid var(--button-color);
+    scale: 1.1;
+}
+
+.image-popup-container {
+    background: black;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-popup-container .img-text {
+    width: 100%;
+    padding-left: 37%;
+    color: rgba(148, 148, 148, 0.521);
+    font-size: 14px;
+}
+
+
+.image-popup {
+    width: 68%;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrow-container {
+    position: absolute;
+    width: 95%;
+    top: 43%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 76%;
+}
+
+.arrows {
+    width: 5%;
+    cursor: pointer;
+    background-color: #ffffff49;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.open-img {
+    width: 92%;
+    aspect-ratio: 19/10;
+    border-radius: 1.5rem;
+    border: 3px solid #282E3A93;
+    box-shadow: 16px 16px 16px -4px #282E3A93,
+    8px 8px 8px 0 #282E3A93;
+}
+
+.image-popup:hover .arrow-container {
+    display: flex;
+    
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+@media (min-width: 1921px) {
+    .aot {
+        left: 15%; 
+        right: 15%;/* Ändere den Wert auf 50% für die horizontale Zentrierung */ /* Zentriere das Element relativ zu sich selbst */
+
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .image-popup:hover .arrow-container {
+        display: flex;
+        
+    }
+}
+
+
+
+
+@media (max-width: 900px) {
+    .arrow-1-container {
+        justify-content: center;
+        padding: 0;
+        
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery img {
+        width: 30rem;
+        height: 20rem;
+    }
+    .gallery {
+        gap: 0rem;
+    }
+    .gallery img {
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 532px) {
+    .gallery img {
+        width: 24rem;
+        height: 16rem;
+    }
+    .gallery img {
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 437px) {
+    .gallery img {
+        width: 18rem;
+        height: 12rem;
+    }
+
+
+}
+
+@media (max-width: 340px) {
+    .gallery img {
+        width: 16rem;
+        height: 10rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .image-popup {
+        width: 100%;
+    }
+    .open-img {
+        margin-bottom: 15px;
+        width: 850px;
+        transform: rotate(90deg);
+    }
+    .image-popup-container .img-text {
+        position: absolute;
+        padding: 0;
+        padding-left: 150px;
+        margin-right: 500px;
+        transform: rotate(90deg);
+        z-index: 999;
+        font-size: 12px;
+        color: rgba(148, 148, 148, 0.521);
+    }
+
+    .arrow-container {
+        padding-right: 40px;
+        transform: rotate(90deg);
+        width: 900px;
+        justify-content: center;
+        gap: 680px;
+        align-items: center;  
+        display: flex;
+    }
+    .uc-header {
+        font-size: 30px;
+    }
+
+}
+
+
+@media (max-width: 594px) {
+    .uc-header {
+        font-size: 20px;
+        padding-left: 44px;
+    }
+
+    .image-popup-container .img-text {
+        padding-right: 240px;
+        margin-right: 420px;
+    }
+
+    .open-img {
+        width: 690px;
+    }
+
+    .arrow-container {
+        padding-right: 45px;
+        width: 800px;
+        gap: 530px;
+
+    }
+} 
+
+@media (max-width: 474px) {
+    .open-img {
+        width: 590px;
+    }
+    .image-popup-container .img-text {
+        margin-right: 360px;
+    }
+    .arrow-container {
+        padding-right: 50px;
+        width: 780px;
+        gap: 430px;
+    }
+}  
+
+@media (max-width: 402px) {
+
+    .open-img {
+        width: 490px;
+    }
+    .image-popup-container .img-text {
+        padding-right: 230px;
+        margin-right: 300px;
+        font-size: 10px;
+    }
+    .arrow-container {
+        padding-right: 45px;
+        width: 600px;
+        gap: 340px;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-gallery{
+        padding: 0;
+
+    }
+    .uc-header {
+        padding: 0;
+        padding-top: 32px;
+    }
+    .aot {
+        width: 318px;
+        background-repeat: no-repeat;
+        
+    }
+
+}
