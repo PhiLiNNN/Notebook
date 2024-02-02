@@ -295,8 +295,6 @@ function dateAndTime() {
    
     return { date: fullDate, time: fullTime };
 }
-
-
 function templatePopup(inputValue, textareaValue, noteID) {
     return /*html*/`
             <div class="popup">
